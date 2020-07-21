@@ -1,0 +1,891 @@
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    max-width:100%;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+/*nustatom kad image'ai islaikytu savo ilgio/plocio santyki kai ekranas mazinamas/didinamas*/
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+} 
+/*backgrounde image'a uzdedam*/
+.header-content1 {
+    background: url(../images/Pex_01-compressor.jpg) top left/cover no-repeat;
+}
+/*nustatom du skirtingus elementu isdetymo tipus ir panaudojam ten kur kokio reikia*/
+.flex-container {
+    display:flex;
+}
+.flex-container2 {
+    display:flex;
+    flex-direction:column;
+}
+.container {
+    max-width:100%;
+}
+
+/*HEADER*/
+
+/*plona linija po headeriu*/
+header:after {
+    content:'';
+    display:block;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+/*elementus(div'us) nustumiam i puslapio krastus horizontaliai*/
+header .container {
+    justify-content: space-between;
+    align-items:center;
+    height: 100px;
+}
+/*margin pastumima darome procentais, tai graziau pastumia elementa nuo sono priklausomai nuo ekrano dydzio, islaiko balansa*/
+.logo {
+    margin-left: 8%;
+    max-width:40px;
+}
+/*cia margin islaikom pastovu*/
+.nav {
+    margin-right: 20px;
+}
+
+/*NAV*/
+
+/* div'as su class="responsive" yra skirtas i ji itraukti search laukeli ir MENIU button'a, kuris rodomas kai ekranas yra tam tikro nustatyto mazesnio dydzio*/
+.responsive {
+    display: none;
+}
+/*centruojam*/
+header .nav-container {
+    align-items:center;
+}
+/*navigacijoj a href mygtukus sukuriame, ju dydi nustatom*/
+.nav a{
+    color:#fff;
+    font-size:0.8125rem;
+    text-decoration: none;
+    padding: 42px 0;
+}
+.nav a:hover{
+    border-bottom:2px solid #fff;
+    padding-bottom:38px;
+}
+/*tarpai tarp nav mygtuku*/
+.nav li{
+    list-style:none;
+    margin: 0 25px;
+}
+/*search laukelio parametrai, tiek prie navigacijos tiek prie MENIU button*/
+.nav .search input, .search-responsive input {
+    max-width: 150px;
+    padding: 10px 40px 10px 10px;
+    border:none;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    display:inline-block;
+    
+}
+/*dedam search mygtuka i input laukelio vidu pasinaudodami margin*/
+header button {
+    padding:7px;
+    background-color:#fff;
+    border:none;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    display:inline-block;
+    cursor:pointer;
+    margin-left:-40px;
+}
+
+/*pozicija pritaikome dropdown menu contentui*/
+.nav-mobile {
+    position: relative;
+}
+/*MENIU mygtuko dizaino nustatymas*/
+.dropbtn {
+    background-color: #e7526b;
+    color: white;
+    padding: 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    cursor: pointer;
+    margin: auto 20px auto 10px;
+}
+/*background spalvos pokytis kai hoverini arba paspaudi and MENIU mygtuko*/
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #e72b4a;
+}
+/* islendancio MENIU turinio dizainas*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 185px;
+    overflow: auto;
+    z-index: 1;
+    margin: 0 20px 0 0;
+    padding: 0 !important;
+}
+
+.nav-mobile li{
+    list-style:none;
+}
+/*drop-down turinio link'u dizainas*/
+.dropdown-content a {
+    text-align:center;
+    color: #999;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;  
+}
+.nav-mobile a:hover{
+    background-color:#ececec;
+}
+.show {
+    display:block;
+} 
+
+/*Content1*/
+/*Nustatom div konteinerio dydi, kuriame pastumiame elementus(h1 teksta ir mygtuka) i desine; dar margin ir padding padarom*/
+.content1 .container { 
+    max-width: 475px;
+    align-items: flex-end;
+    margin-left:8%;
+    padding: 275px 0 250px 0;
+}
+/*teksta stumiai i desine*/
+.content1 .container h1 {
+    font-size: 3.125rem;
+    font-weight:normal;
+    margin: 0 0 0 10%;
+    color:#fff;
+    text-decoration-style: none;
+    text-align: right;    
+}
+/*div'as kuriame yra mygtukas ir uzrasas po mygtuku*/
+.content1 .btn1text {
+    margin-top: 25px;
+}
+/*teksto po mygtuko dizainas*/
+.content1 .btn1text p {
+    max-width:250px;
+    display: block;
+    text-align:center;
+    color: #fff;
+    font-size: 0.75rem;
+    opacity: 60%;
+    padding-top:22px;
+}
+/* a href mygtuko dizainas */
+.btn1 a {
+    text-decoration: none;
+    font-weight:bold;
+    color:#fff;
+    padding: 22px 60px;
+    display: inline-block;
+    background-color: #8824cd;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    box-shadow: .5px -.5px #fff;
+    -webkit-box-shadow: .5px -.5px #fff;
+    -moz-box-shadow: .5px -.5px #fff;
+}
+
+.btn1 a:hover {
+    background-color: #fff;
+    color: #8824cd;
+    box-shadow: .5px -.5px #8824cd;
+}
+
+/*Content2*/
+/*background spalva ir centravimas*/
+.content2 {
+    background-color: #2e3b4e;
+    justify-content: center;
+}
+/*tekstu dizaino nustatymai*/
+.content2 .container h2 {
+    font-weight:bold;
+    font-size: 0.9375rem;
+    color:#fff; 
+}
+.content2 .container p {
+    font-size: 0.9375rem;
+    color:#e2e3e4;
+}
+/*grid'as sukuriamas stulpeliams isdestyti*/
+.stulpelis1{grid-area:s1;}
+.stulpelis2{grid-area:s2;}
+.stulpelis3{grid-area:s3;}
+.stulpelis4{grid-area:s4;}
+/*stulpeliu isdestymas, ju dydziai ir t.t*/
+.content2 .container {
+    justify-content:center;
+    margin: 120px 0;
+    display: grid;
+    grid-gap: 40px 20px;
+    /*isdestymas dvi eilutes su auto auksciu ir 2 stulpeliai su 300px plociu*/
+    grid-template: repeat(2, auto) / repeat(2, 300px);
+    grid-template-areas: 
+        "s1 s2"
+        "s3 s4";
+}
+
+/*Content3*/
+
+.content3 {
+    background: url(../images/Pex2_02-compressor.jpg) top left/cover no-repeat;
+}
+/*paddingai uzdedami*/
+.content3 .container {
+    align-items:center;
+    padding: 145px 0 250px 0;
+}
+/*margin paslinkim po .text klases div'u uzdedame*/
+.content3 .text, .content5 .text {
+    margin: 0 30px;
+}
+/* abieju conten3 ir conten5 headings darome vienodo dizaino*/
+.content3 h2, .content5 h2 {
+    font-size: 2.1875rem;
+    font-weight: 300;
+    color:#fff;
+    text-align: center;
+    margin-bottom: 25px;
+}
+/*paragrafo teksto dizainas, teksto rikiavimas centre/centravimas*/
+.content3 p {
+    font-size: 0.9375rem;
+    color:#fff;
+    text-align: center;
+    max-width: 500px;
+    margin-bottom: 32px;
+}
+/*a href mygtuko dizainas*/
+.content3 .btn2 a {
+    text-decoration: none;
+    color:#d54c63;
+    font-weight: bold;
+    padding: 18px 50px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius:50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    box-shadow: .5px -.5px #fff;
+    -webkit-box-shadow: .5px -.5px #fff;
+    -moz-box-shadow: .5px -.5px #fff;
+}
+.content3 .btn2 a:hover{
+    background-color:#e7528a;
+    color:#fff;
+}
+
+/*pridedam dizaino detale po content3*/
+.pusrutulis {
+    background: url(../images/mel_01.png) bottom center no-repeat;
+    background-size: 60px 60px; /*background image dydis*/
+    height: 30px; /*div'o, kuriame yra background detale aukstis*/
+    position:absolute;
+    width: 100%; /*div'o plotis*/
+    margin: 0 auto; /*centruojame background'a div'o plotyje*/
+}
+
+
+/*section Gallery*/
+/*galerijos kontenerio maksimalus dydis ir kiti nustatymai*/
+.gallery-container{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/*elementai */
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.col{
+	margin-top: 25px;
+	width: calc(33.3333% - 17px);
+	-webkit-box-shadow: 5px 5px 16px 0px rgba(176,176,176,1);
+	-moz-box-shadow: 5px 5px 16px 0px rgba(176,176,176,1);
+	box-shadow: 5px 5px 16px 0px rgba(176,176,176,1);
+}
+
+.slider, .gallery{
+	background-color: #F2F2F2;
+	padding-top: 5px;
+	padding-bottom: 30px;
+}
+
+.slider{
+	background-color: #A5A5A5;
+}
+
+.bg{
+	background-color: #BCE7FD;
+}
+
+.tns-nav-active{
+	background-color: red;
+}
+
+/*Content4*/
+.content4, .content7 {
+    height: auto;
+    font-family: 'Merriweather', serif;
+}
+/*content4 ir content7 sekcijose isskirstom elementus i skirtingus puslapio galus horizontaliai*/
+.content4 .container {
+    justify-content:flex-start;
+} 
+/* teksto paddings nustatomi su 'vw' kad keistusi pagal ekrano dydi*/
+.content4 .text{
+    padding: 5vw 5vw 5vw 5vw;
+    max-width: 50%;  /* nustatomas maksimalus teksto uzimamas plotis ekrane*/
+}
+/*tekstu dydziai content4 ir content7 sekcijose nustatomi*/
+.content4 h3, .content7 h3 {
+    font-size: 0.9375rem;
+}
+.content4 .text .text1, .content7 .text .text1 {
+    font-size: 0.9rem;
+}
+.content4 .text .text2, .content7 .text .text2 {
+    font-size: 0.75rem;
+}
+
+/*Content5*/
+.content5 {
+    background: url(../images/Pex3_02-compressor.jpg) top left/cover no-repeat;
+}
+/*elementu centravimas ir paddings uzdejimas*/
+.content5 .container {
+    align-items: center;
+    padding: 190px 0 120px 0;
+}
+/*paragrafo su klase text1 fontu dydis ir spalva*/
+.content5 .text1 {
+    font-size: 1.25rem;
+    color:#a87bb7;
+}
+/*paragrafo su klase text2 fontu dydis ir spalva ir permatomumas 0.7 uzdedamas*/
+.content5 .text2 {
+    font-size: 0.75rem;
+    color:#fff;
+    opacity: 0.7;
+}
+
+.content5 p, .content5 h4  {
+    text-align:center;
+}
+/*nustatoma layer pozicija*/
+.content5 .layer{
+    position: relative;
+    z-index: 1;
+}  
+/*ant Content5 background uzdedamas background color sluoksnis, kuris turi nustatyta transformacija*/
+.content5 .layer::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(.8);
+    transform-origin: bottom center;
+    background: #521a66;
+    opacity: 50%;
+    -webkit-opacity: 50%;
+    -moz-opacity: 50%;
+    -ms-opacity: 50%;
+    -o-opacity: 50%;
+    -khtml-opacity: 50%;
+    z-index: -1;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+    -khtml-transition: transform 1s;
+    transition: transform 1s;
+}
+/*kai su pele uzvedi transformacija ivyksta*/
+.content5 .layer:hover::after {
+    transform: scaleY(1);
+}
+
+/*Content6*/
+
+.content6 {
+    background: url(../images/Pex4_02-compressor.jpg) top left/cover no-repeat;
+}
+/*ant Content6 background uzdedamas background color sluoksnis, kuris pasirodo, kai pele uzvedama ant backgroundo*/
+.content6 .layer:hover {
+    background: linear-gradient(to top, rgba(51,51,51,0.5), rgba(51,51,51,0));
+}
+
+.content6 .container {
+    padding: 360px 0 90px 10%;
+}
+
+.content6 .author {
+    align-items: center;
+    padding-top:25px;
+}
+/*content6 div'o conteinerio plotis kuriame yra elementai, ju galima maksimalu ploti apribojame.*/
+.content6 .container {
+    max-width: 800px;
+}
+
+.content6 .author p {
+    text-align: left;
+    color:#fff;
+    margin-left:10px;
+    font-size: 0.8125rem;
+}
+.content6 a {
+    text-decoration: none;
+}
+/*headings teksto dydis*/
+.content6 .heading a {
+    font-size: 2.5rem;
+    color:#fff;
+    font-weight: 300;
+}
+/*blog button dizainas*/
+.blogbutton a{
+    display: inline-block;
+    font-size:1rem;
+    color:#fff;
+    border:2px solid #fff;
+    padding: 8px 20px;
+    text-align: center;
+    border-radius:50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.blogbutton a:hover{
+    color:#000;
+    background-color:#fff;
+    padding: 8px 20px;
+    border-color:#000;
+    
+}
+/*nuotraukos formavimas*/
+.content6 img {
+    max-width:40px;
+    height: auto;
+    border-radius:50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+/*Content7*/
+
+/*paddings su vw nustatom kad islaikytu atstumu balansa ekranui mazejant; nustatom kiek tekstas maksimaliai gali uzimti ekrano*/
+.content7 .text{
+    padding: 5vw 5vw 5vw 8vw;
+    max-width: 50%;
+}
+/*content7 sekcijoje isskirstom elementus i skirtingus puslapio galus horizontaliai*/
+.content7 .container {
+    justify-content:space-between;
+} 
+
+/* CONTACT */
+
+.contact {
+    background-color:#e7526b;
+    color:#fff;
+}
+/*padding uzdedam is virsaus ir apacios*/
+.contact .container {
+    padding: 40px 0;
+}
+
+.contact .contact-text {
+    align-items: center;
+    margin: 0 30px;
+}
+
+.contact .contact-text h2 {
+    margin:0;
+}
+
+.contact .section-content{
+    max-width: 700px;
+    margin: 0 auto;
+}
+/*input field dizaino detales*/
+.contact .section-content .contact-form input {
+    padding:20px 25px;
+    border-radius:5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border:none;
+    color:#fff;
+    background-color: #e7528a;
+    width: 70%;
+    margin: 10px auto; 
+}
+/*place holder spalvoms nustatyti skirtingoms narsyklems*/
+.contact .section-content .contact-form input::placeholder,
+.contact .section-content .contact-form textarea::placeholder
+{
+    color:#fff;
+}
+.contact .section-content .contact-form input::-webkit-input-placeholder,
+.contact .section-content .contact-form textarea::-webkit-input-placeholder {  /* Chrome/Opera/Safari */
+  color: #fff;
+}
+.contact .section-content .contact-form input::-moz-placeholder,
+.contact .section-content .contact-form textarea::-moz-placeholder {  /* Firefox 19+ */
+  color: #fff;
+}
+.contact .section-content .contact-form input:-ms-input-placeholder,
+.contact .section-content .contact-form textarea:-ms-input-placeholder {  /* Edge/IE 10+ */
+  color: #fff;
+}
+
+.contact .section-content .contact-form textarea {
+    border:none;
+    border-radius:5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 25px;
+    color:#fff;
+    background-color: #e7528a;
+    width: 70%;
+    margin: 10px auto;
+}
+/*buttono dizainas nustatomas*/
+.contact .section-content .contact-form .btn-contact {
+    margin: 20px auto;
+    display:block;
+    width: 200px;
+    height: 60px;
+    background-color: #fff;
+    border-color: #fff;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    cursor: pointer;
+}
+/*keiciama mygtuko spalvine gama kai uzvedi pele ar paspaudi mygtuka*/
+.contact .section-content .contact-form .btn-contact:hover, 
+.contact .section-content .contact-form .btn-contact:focus {
+    background-color: #e7528a;
+    color:#fff;
+}
+
+
+/*FOOTER*/
+
+footer {
+    background-color: #2e3b4e;
+    height: 200px;
+    padding-top:20px; 
+}
+
+footer .container {
+    justify-content: space-between;
+}
+/*footerio copyright paragrafo dizainas, margins ir pan*/
+footer .copyright {
+    font-size: 0.75rem;
+    color: #fff;
+    margin-left:10%;
+    margin-right:1%;
+    white-space: nowrap; /* kad tekstas neluztu*/
+}
+footer .ivirsu {
+    font-size: 0.75rem;
+    color: #fff;
+    margin-right:10%;
+    margin-left:1%;
+    white-space: nowrap; /* kad tekstas neluztu*/
+}
+/* a href mygtuko dizainas*/
+footer a {
+    font-size: 0.75rem;
+    color:#2e3b4e;
+    padding: 10px 10px;
+    display: block;
+    text-decoration: none;
+    background-color: #fff;
+    border-color: #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    cursor: pointer;
+}
+
+footer a:hover {
+    background-color: #e7526b;
+    border-color: #fff;
+    color:#fff;
+}
+
+/*PLACIAEKRANIAMS MONITORIAMS*/
+
+@media only screen and (min-width: 3000px) {
+    /*fiksuoti padding, kad pleciantis ekranui margins liktu stabilus ir nesiplestu i begalybe*/
+    .content4 .text{
+    padding: 150px 150px 150px 150px;
+    max-width: 40%; 
+    }    
+    
+    .content7 .text{
+    padding: 150px 150px 150px 150px;
+    max-width: 50%;
+    }  
+}
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 1050px) {
+    /*pakoreguojam backgroundu image'u pozicija,kad graziau atrodytu*/
+    .header-content1 {
+        background-position: 40% 50%;   
+    }
+    .content3, .content5, .content6 {
+        background-position: center;
+    }
+    .content6 {
+        background-position: 20% 50%;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    /* mazinam navigacijos mygtuku tarpus, teksto dydi, kad navigacija tilptu i mazesni ekrana*/
+    .nav a{
+        font-size:0.8125rem;
+    }
+
+    .nav li{
+        margin: 0 20px;
+    }
+
+    .nav .search input {
+        width: 120px;
+    }
+    /*mazinam sekcijos "gallery" stulpeliu kieki is triju i du su calc funkcija*/
+    .col {
+        width:calc(50% - 12px);
+    }  
+}
+
+@media screen and (max-width: 730px) {
+    /*mazinam tam tikrus navigacijos elementu dydzius, kad ji issitektu mazesniame ekrane*/
+    .nav a{
+    font-size:0.8125rem;
+    padding: 42px 0;
+    }
+    .nav li{
+    margin: 0 15px;
+    }
+    .nav .search input {
+    max-width: 110px;
+    }
+    /*maziname content4 ir content7 tekstu paddingus kad geriau tilptu ekrane, naudojam % kad geriau*/
+    /*content4*/
+    .content4 .text{
+    padding: 5vw 2vw 2vw 4vw;
+    }    
+    /*conten7*/
+    .content7 .text{
+    padding: 5vw 3vw 3vw 4vw;
+    }
+}
+
+@media only screen and (max-width: 655px) {
+    /*paslepiam iprasta navigacija ir atsplepiam(parodom) dropdown navigacijos mygtuka ir i kitur perdeta search laukeli*/
+    .nav {
+        display: none;
+    }
+    .responsive {
+        display: flex;
+        align-items: center; /*isdestom search laukeli i mygtuka vienas salia kito ir centruojame*/
+    }
+    .search-responsive {
+        padding-right: 10px;
+    }
+    .search-responsive input{
+        max-width: 120px;
+    }
+
+    /*content2*/
+    /*isdestom stulpelius zemyn vienas po kito*/
+    .content2 .container {
+    grid-template: repeat(4, auto) / repeat(1, 300px);
+    grid-template-areas: 
+        "s1"
+        "s2"
+        "s3"
+        "s4";
+    }   
+    
+    /*content4 ir content7*/
+    /*pakeiciam elementu idestymo krypti, kad elementus deliotu vertikaliai viena po kito, o ne lygiagreciai*/
+    .content4, .content7 {
+        height:auto;
+    }
+    .content4 .container, .content7 .container {
+        flex-direction:column;
+    }
+    .content4 .text, .content7 .text{ 
+       margin: 0 10vw;
+       max-width: 100%; /*nustatom kad tekstas galetu uzimti visa ekrano ploti*/
+    }   
+}
+
+@media only screen and (max-width: 620px) {
+    /*content1*/
+    /*sumazinam paslinkimo margin nuo kaires, kad elementas ekrane graziau atrodytu*/
+    .content1 .container { 
+    margin-left:4%;
+    }    
+}
+
+@media only screen and (max-width: 580px) {
+    /*content1*/
+    .content1 .container {
+    margin-left:1%;
+    }
+    
+    /*content 6*/
+    /*mazinam kai kuriu elementu dydi, kad atrodytu graziau mazesniame ekrane*/
+    .content6 .author p {
+    font-size: 0.7rem;   
+    }
+    .content6 .heading a {
+    font-size: 2rem;
+    }
+    .content6 img {
+    max-width:25px; 
+    }
+    .blogbutton a{
+    padding: 7px 17.5px;
+    font-size:0.8rem;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    /*content1*/
+    /*mazinam lenteles dydi(kuriame yra h1 tekstas)*/
+    .content1 .container { 
+    max-width: 400px;
+    margin-left:8%;
+    }
+    /*mazinam font h1 dydi*/
+    .content1 .container h1 {
+    font-size: 2.5rem;   
+    }
+    /*footer*/
+    /*reikia kad copyriht tekstas vel luztu, kad tilptu i ekrana*/
+    footer .copyright {
+    white-space: normal;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /*content1*/
+    .content1 .container { 
+    margin-left:1%;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    /*content1*/
+    /*mazinam lenteles dydi(kuriame yra h1 tekstas)*/
+    .content1 .container { 
+    max-width: 330px;
+    margin-left:4%;
+    padding: 200px 0 220px 0;
+    }
+    /*mazinam font h1 dydi, lenteles dydi kuriame yra mazasis tekstas*/
+    .content1 .container h1 {
+    font-size: 2.1rem;   
+    }
+    content1 .btn1text p {
+    width:200px;
+}
+    
+@media only screen and (max-width: 375px) {
+      /*content1*/
+    /*mazinam lenteles dydi(kuriame yra h1 tekstas) mazinam padding mazesniems telefonu ekranams*/
+    .content1 .container { 
+    max-width: 300px;
+    margin-left:3%;
+    padding: 135px 0 215px 0;
+    }
+    
+    /*mazinam font h1 dydi*/
+    .content1 .container h1 {
+    font-size: 2rem;   
+    }
+    /*content2 - mazinam stulpeliu ploti(ji darom automatini pagal ekrana ir uzdedam margin is kaires ir desines*/
+    .content2 .container {
+    grid-template-columns: auto;
+    margin-left: 30px;
+    margin-right: 30px
+    }
+    
+}
+
+@media only screen and (max-width: 340px) {
+    /*NAV*/
+    /*content1*/
+    /*mazinam lenteles dydi(kuriame yra h1 tekstas) ir mazinam padding*/
+    .content1 .container { 
+    max-width: 280px;
+    margin-left:2%;
+    padding: 100px 0 200px 0;
+    }
+    /*mazinam font h1 dydi*/
+    .content1 .container h1 {
+    font-size: 1.8rem;   
+    }   
+}
+    
+@media only screen and (max-width: 290px) {
+    /*content1*/
+    /*lenteles dydi(kuriame yra h1 tekstas) darome automatiska pagal ekrana*/
+    .content1 .container { 
+    max-width: auto;
+    text-align: center;
+    margin-left:1%;
+    margin-right: 1%;
+    }
+    /*mazinam font h1 dydi ir ji centruojame maziausiems ekranams(jei tokie egzistuoja)*/
+    .content1 .container h1 {
+    font-size: 1.7rem;
+    text-align: center;
+    }
+    /*mazinam contact mygtuko ploti*/
+    .contact .section-content .contact-form .btn-contact {
+    max-width: 100px;
+    }  
+}
