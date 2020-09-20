@@ -1,0 +1,524 @@
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    max-width:100%;
+}
+
+html {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+    margin:0 auto;
+    
+}
+
+.flex-container {
+    display: flex;
+}
+
+/*Header*/
+.header-hero {
+    background: url(../images/ActiveBox_01-min.png) top left/cover no-repeat;
+}
+
+header .container {
+    justify-content: space-between;
+    align-items:center;
+    height: 100px;
+}
+
+.logo {
+    margin-left: 8%;
+}
+
+
+/*Nav*/
+.nav-mobile {
+    display: none;
+}
+
+.nav {
+    margin-right: 50px;
+}
+
+header .nav-container {
+    align-items:center;
+}
+.nav a{
+    color:#cccdd3;
+    font-size:0.75rem;
+    text-decoration: none;
+    padding: 42px 0;
+    text-transform: uppercase;
+}
+.nav li {
+    list-style:none;
+    margin: 0 20px;
+}
+
+/*navigacija mobiliems*/
+.nav-mobile {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #e84545;
+    color: white;
+    padding: 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    cursor: pointer;
+    margin: auto 20px;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #e82929;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 185px;
+    overflow: auto;
+    z-index: 1;
+    margin: 0 20px 0 0;
+    padding: 0 !important;
+}
+.nav-mobile li{
+    list-style:none;
+}
+/*drop-down turinio link'u dizainas*/
+.dropdown-content a {
+    text-align:center;
+    color: #999;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;  
+}
+.nav-mobile a:hover{
+    background-color:#ececec;
+}
+.show {
+    display:block;
+}
+
+/*Hero*/
+.hero {
+    text-align: center;
+}
+.hero .container {
+    padding: 150px 20px;
+    max-width:950px;
+}
+.hero h1{
+    font-size:3.125rem;
+    text-transform: uppercase;
+    color:#fff;
+}
+.hero p {
+    margin-bottom: 80px;
+    font-size: 1.5rem;
+    color: #b9bbc3;
+}
+.btn1 a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#fff;
+    padding: 18px 45px;
+    display: inline-block;
+    background-color: #e84545;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+.btn1 a:hover {
+    background-color: #fff;
+    color: #e84545;
+}
+
+
+
+/*Stulpeliai*/
+
+.stulpeliai > .flex-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.stulpeliai .container {
+    margin: 120px 100px;
+}
+/*stulpeliu isdestymas su calc funkcija, i tris stulpeliai eiluteje padaromi*/
+.stulpelis {
+    width: calc(33.3333% - 17px);
+    text-align: center;
+    margin: 37px 0;
+}
+
+.stulpelis img {
+    margin: 0 auto;
+}
+
+/*Galerija*/
+
+.galerija > .flex-container {
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.galerija .container {
+    width:100%; 
+    margin:0 auto;
+}
+/*nuotrauku isdestymas, 4nuotraukos eiluteje */
+.galerija .nuotrauka {
+    width: calc(25%);
+}
+.galerija  {
+    width:100%; 
+}
+.galerija img {
+    margin: 0 auto;
+}
+
+
+/*Zmones*/
+.zmones .container {
+    margin: 150px 50px;
+}
+
+.zmones > .flex-container{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.zmogus {
+    width: calc(24%);
+    margin: 35px 5px;
+}
+/*maksimalus plotis zmogus stulpelio nustatomas*/
+.zmogus h2, .zmogus span, .zmogus p {
+    max-width:270px;
+}
+.zmogus h2 {
+    margin-bottom:12px;
+    font-size: 1.5rem;
+}
+.zmogus span {
+    color:#e84545;
+    font-size: 1rem;
+}
+.zmogus p {
+    color:#80858b;
+    font-size: 0.8125rem;
+}
+.zmogus .social-container {
+    display: flex;
+    justify-content: flex-start;
+}
+.zmones .social-nav li {
+    list-style:none;
+    margin:2px;
+}
+.zmones .social-nav a i {
+    color:#fff;
+    background-color: #c6cacc;
+    font-size: 1rem;
+    padding: 5px;
+}
+.social-nav ul{
+    padding: 0px !important;
+}
+
+
+/*Nuotrtekstas*/
+
+.nuotrtekstas  {
+    background-color: #53354a;
+}
+.nuotrtekstas .tekstas {
+    margin:5% 1% 0 5%;
+    max-width: 550px;
+}
+.nuotrtekstas .tekstas1 {
+    font-family: 'Cardo', serif;
+    color:#fff;
+    font-size:1.5rem;
+}
+.nuotrtekstas .tekstas2 {
+    color:#fff;
+    font-size:0.7rem;
+    text-transform: uppercase;
+    font-weight: bold;   
+}
+.nuotrtekstas .nuotr {
+    max-width:50%;
+}
+
+/*Tekstasmygtukas*/
+
+.tekstasmygtukas {
+    text-align: center;
+}
+.tekstasmygtukas .container {
+    padding: 150px 20px;
+    max-width:950px;
+}
+
+.tekstasmygtukas h2 {
+    font-weight: 200;
+    font-size:1.5rem;
+    
+}
+.tekstasmygtukas p {
+    font-weight: bold;
+    font-size:0.625rem;
+    margin-bottom: 30px;
+}
+.btn2 a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#fff;
+    padding: 18px 80px;
+    display: inline-block;
+    background-color: #e84545;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+.btn2 a:hover {
+    background-color: #3a3e64;
+    color: #fff;
+}
+
+/*Galas*/
+.galas {
+    background-color: #3a3e64;
+}
+.galas .flex-container{
+    justify-content: space-between;
+}
+.galas .social-container {
+    display:flex;
+}
+.galas .container{
+    max-width: 1040px;
+    padding: 70px 20px;
+    
+}
+.location, .social-nav, .about {
+    max-width: 200px;
+}
+.galas .social-nav li {
+    list-style:none;
+    margin:2px;
+}
+.galas .social-nav a i {
+    color:#fff;
+    background-color: #c6cacc;
+    font-size: 1rem;
+    padding: 5px;
+}
+.galas .pavadinimas {
+    font-size:0.75rem;
+    text-transform: uppercase;
+    color:#fff;
+    font-weight: bold;
+    text-align: center;
+}
+.galas .tekstas {
+    font-size:0.75rem;
+    color:#9092a7;
+    text-align: center;
+}
+
+
+/*Footer*/
+
+.footer {
+    background-color: #313454;
+}
+.footer .container {
+   text-align: center;
+   padding:20px 0; 
+}
+.footer .copyright, .footer .tekstas {
+    color:#808080;
+}
+
+/*CONTACT FORM*/
+
+.contactheader {
+    background: url(../images/ActiveBox_01-min.png) top left/cover no-repeat;
+}
+
+.contact {
+    background-color:#fff;
+    color:#3a3e64;
+}
+.contact .container {
+    padding: 40px 0;
+}
+
+.contact .flex-container {
+    flex-direction: column;
+}
+
+.contact .contact-text {
+    align-items: center;
+    margin: 0 30px;
+}
+
+.contact .contact-text h2 {
+    margin:0;
+}
+
+.contact .section-content{
+    max-width: 700px;
+    margin: 0 auto;
+}
+/*input field dizainas*/
+.contact .section-content .contact-form input {
+    padding:20px 25px;
+    border-radius:2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border:none;
+    color:#fff;
+    background-color: #3a3e64;
+    width: 70%;
+    margin: 10px auto; 
+}
+
+.contact .section-content .contact-form input::placeholder,
+.contact .section-content .contact-form textarea::placeholder
+{
+    color:#fff;
+}
+.contact .section-content .contact-form input::-webkit-input-placeholder,
+.contact .section-content .contact-form textarea::-webkit-input-placeholder {  /* Chrome/Opera/Safari */
+  color: #fff;
+}
+.contact .section-content .contact-form input::-moz-placeholder,
+.contact .section-content .contact-form textarea::-moz-placeholder {  /* Firefox 19+ */
+  color: #fff;
+}
+.contact .section-content .contact-form input:-ms-input-placeholder,
+.contact .section-content .contact-form textarea:-ms-input-placeholder {  /* Edge/IE 10+ */
+  color: #fff;
+}
+
+.contact .section-content .contact-form textarea {
+    border:none;
+    border-radius:2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    padding: 25px;
+    color:#fff;
+    background-color: #3a3e64;
+    width: 70%;
+    margin: 10px auto;
+}
+/*mygtuko dizainas*/
+.contact .section-content .contact-form .btn-contact {
+    margin: 20px auto;
+    display:block;
+    width: 200px;
+    height: 60px;
+    background-color: #fff;
+    border-color: #66697e;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    cursor: pointer;
+}
+
+.contact .section-content .contact-form .btn-contact:hover, 
+.contact .section-content .contact-form .btn-contact:focus {
+    background-color: #3a3e64;
+    color:#fff;
+}
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 1210px) {
+    .zmogus {
+    width: calc(45%);
+    margin: 35px 5px;
+}
+    .zmones .container {
+    margin: 150px 250px;
+}
+}
+
+@media only screen and (max-width: 1100px) {
+   .zmones .container {
+    margin: 150px 175px;
+}
+}
+
+@media only screen and (max-width: 900px) {
+    .zmones .container {
+    margin: 150px 100px;
+}
+    .galerija .nuotrauka {
+    width: calc(50%);
+}
+    .nav {
+        display: none;
+    }
+    .nav-mobile {
+        display:block; /*rodome MENIU mygtuka*/
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .stulpeliai .container {
+    margin: 120px 40px;
+}
+    .zmones .container {
+    margin: 150px 50px;
+}
+    .nuotrtekstas .flex-container {
+    flex-direction:column;
+}
+    .nuotrtekstas .nuotr {
+    max-width:100%;
+}
+}
+@media only screen and (max-width: 640px) {
+    .galas .flex-container {
+        flex-direction: column;
+        align-items:center;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .stulpelis {
+    width: calc(50% - 17px);
+}
+}
+@media only screen and (max-width: 410px) {
+    .stulpelis {
+    width: calc(100%);
+}
+    .zmogus {
+    width: calc(100%);
+}   
+}
+
+
+
